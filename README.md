@@ -84,7 +84,7 @@ sudo apt-get install xscreensaver
 
 ## 4th step - Installing MPV media player
 
-MVP media player will be used to read the videos. You can install it by running:
+MPV media player will be used to read the videos. You can install it by running:
 
 ```bash
 sudo add-apt-repository ppa:mc3man/mpv-tests
@@ -97,10 +97,10 @@ sudo apt-get install mpv
 Add this line to programs listed in `~/.xscreensaver` file (just below the list containing many `- GL:` entries):
 
 ```bash
-- Best:         "Apple Aerial"   mpv --really-quiet --shuffle --no-audio       \
-                                 --fs --loop=inf --no-stop-screensaver       \
-                                 --wid=$XSCREENSAVER_WINDOW --panscan=1      \
-                                 <path_to_apple_tv_screensaver_files>/*                      \n\
+- Best:         "Apple Aerial"   mpv --really-quiet --shuffle --no-audio        \
+                                 --fs --loop-playlist=inf --no-stop-screensaver \
+                                 --wid=$XSCREENSAVER_WINDOW --panscan=1         \
+                                 <path_to_apple_tv_screensaver_files>/*       \n\
 ```
 
 where `<path_to_apple_tv_screensaver_files>` is the folder where are .mov files downloaded in 1st step.
