@@ -52,18 +52,40 @@ for screensaver in screensavers:
 
 where the first and only argument when using the script is the path where to put the video files.
 
+Copy this code to a file *getAerial.py*, allow execution running command:
+
+```bash
+chmod +x getAerial.py <path_to_apple_tv_screensaver_files>
+```
+
+and run:
+
+```bash
+./getAerial.py <>
+```
+
+Now just be very patient, especially if you have a slow internet connection.
+
 ## 2nd step - Removing gnome-screensaver
+
+There can be issues with gnome-screensaver package. The best is just to remove it running the following command:
 
 ```bash
 sudo apt-get autoremove gnome-screensaver
 ```
 
 ## 3rd step - Installing XScreenSaver
+
+Run the following command:
+
 ```bash
 sudo apt-get install xscreensaver
 ```
 
 ## 4th step - Installing MPV media player
+
+MVP media player will be used to read the videos. You can install it by running:
+
 ```bash
 sudo add-apt-repository ppa:mc3man/mpv-tests
 sudo apt-get update
@@ -72,7 +94,7 @@ sudo apt-get install mpv
 
 ## 5th step - Adding Apple TV Aerial Views Screensaver to XScreenSaver
 
-Add this line to programs listed in `~/.xscreensaver` file:
+Add this line to programs listed in `~/.xscreensaver` file (just below the list containing many `- GL:` entries):
 
 ```bash
 - Best:         "Apple Aerial"   mpv --really-quiet --shuffle --no-audio       \
@@ -87,13 +109,13 @@ where `<path_to_apple_tv_screensaver_files>` is the folder where are .mov files 
 
 Go to Settings -> Startup Applications and add new entry:
 
-- __Name:__ XScreenSaver runner
+- __Name:__ XScreenSaver Runner
 - __Command:__ xscreensaver --nosplash
 - __Comment:__ Running XScreenSaver
 
 ## 7th step - Preventing XScreenSaver to run when a full-screen application is running
 
-When a full-screen applications is running (Netflix, Youtube, Molotov.tv...), you don't want any screensaver to be run. Using the bash script `xscreensaverstopper.sh` restarts idle timer when a full-screen application in foreground is detected:
+When a full-screen applications is running (Netflix, Youtube, Molotov.tv...), you don't want any screensaver to be run. Using the bash script listed below restarts idle timer when a full-screen application in foreground is detected:
 
 ```bash
 #!/usr/bin/env bash
@@ -137,12 +159,14 @@ done
 
 exit 0
 ```
-
+Copy this script to a file named *xscreensaverstopper.sh*
 This script must be run at startup. Like in 6th step, go to Settings -> Startup Applications and add new entry:
 
 - __Name:__ XScreenSaver stopper
-- __Command:__ &lt;path_to_xscreensaverstopper&gt;/xscreensaverstopper.sh`
+- __Command:__ &lt;path_to_xscreensaverstopper&gt;/xscreensaverstopper.sh
 - __Comment:__ Running XScreenSaver
+
+where &lt;path_to_xscreensaverstopper&gt; is the path where you put your script *xscreensaverstopper.sh*.
 
 ## 8th step - Starting XScreenSaver desktop application
 
@@ -155,3 +179,18 @@ This script must be run at startup. Like in 6th step, go to Settings -> Startup 
 ## 9th step - Restart computer
 
 Enjoy!
+
+## Notes
+
+- If you wish to change timeout in *Screensaver* Unity application, you should log out and in again or restart your computer to get the expected behavior.
+- Feel free to add *xscreensaverstopper.sh* somewhere in your path (like in "/usr/bin") to avoid deleting it by mistake. Anyway, once set as startup application, it should not be moved.
+
+## Special thanks
+
+The scripts used in this tutorial were taken or adapted from several excellent sources:
+
+- The animation at the beginning was taken from https://github.com/JohnCoates/Aerial.
+- The Python script used to retrieve videos and installation methods were directly taken from https://gist.github.com/Dhertz/9dd69eaad092d0c0fe96.
+- The script to prevent screensaver from popping when using full-screen applications was freely adapted from https://jamcnaughton.com/2015/01/10/stop-xscreensaver-interrupting-full-screen-videos/.
+
+Thank you a lot to these 3 contributors who made this tutorial possible.
