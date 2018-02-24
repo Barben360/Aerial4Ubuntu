@@ -61,7 +61,7 @@ chmod +x getAerial.py <path_to_apple_tv_screensaver_files>
 and run:
 
 ```bash
-./getAerial.py <>
+./getAerial.py <path_to_apple_tv_screensaver_files>
 ```
 
 Now just be very patient, especially if you have a slow internet connection.
