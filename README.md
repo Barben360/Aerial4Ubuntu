@@ -6,9 +6,7 @@ This tutorial shows how to install Apple TV Aerial Views Screensaver for Ubuntu.
 
 Apple TV Aerial Views Screensaver is a collection of high-resolution videos showing splendid point of views of several places in the world such as illustrated below.
 
-<p align="center">
 ![screencast](https://cloud.githubusercontent.com/assets/499192/10754100/c0e1cc4c-7c95-11e5-9d3b-842d3acc2fd5.gif)
-</p>
 
 Ubuntu is a great OS, but not the sexiest ever. Apple TV Aerial Views Screensaver is a great way to improve it.
 
