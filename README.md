@@ -55,7 +55,7 @@ where the first and only argument when using the script is the path where to put
 Copy this code to a file *getAerial.py*, allow execution running command:
 
 ```bash
-chmod +x getAerial.py <path_to_apple_tv_screensaver_files>
+chmod +x getAerial.py
 ```
 
 and run:
@@ -159,7 +159,11 @@ done
 
 exit 0
 ```
-Copy this script to a file named *xscreensaverstopper.sh*
+Copy this script to a file named *xscreensaverstopper.sh* and allow execution running command:
+
+```bash
+chmod +x xscreensaverstopper.sh
+```
 This script must be run at startup. Like in 6th step, go to Settings -> Startup Applications and add new entry:
 
 - __Name:__ XScreenSaver stopper
