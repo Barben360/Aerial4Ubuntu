@@ -110,7 +110,7 @@ where `<path_to_apple_tv_screensaver_files>` is the folder where are .mov files 
 Go to Settings -> Startup Applications and add new entry:
 
 - __Name:__ XScreenSaver Runner
-- __Command:__ xscreensaver --nosplash
+- __Command:__ xscreensaver -nosplash
 - __Comment:__ Running XScreenSaver
 
 ## 7th step - Preventing XScreenSaver to run when a full-screen application is running
