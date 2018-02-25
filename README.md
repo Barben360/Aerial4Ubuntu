@@ -98,6 +98,8 @@ sudo apt-get install mpv
 
 ## 5th step - Adding Apple TV Aerial Views Screensaver to XScreenSaver
 
+run *Screensaver* Unity application, select OK when a message is prompted and quit the application (this initiates *.xscreensaver* file in your home).
+
 Add this line to programs listed in `~/.xscreensaver` file (just below the list containing many `- GL:` entries):
 
 ```bash
