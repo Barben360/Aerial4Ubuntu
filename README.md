@@ -64,7 +64,11 @@ and run:
 ./getAerial.py <path_to_apple_tv_screensaver_files>
 ```
 
-Now just be very patient, especially if you have a slow internet connection.
+Now just be very patient, especially if you have a slow internet connection. If the script doesn't run because a package is missing (e.g. *requests*), just install it running the command:
+
+```bash
+sudo apt-get install python-requests
+```
 
 ## 2nd step - Removing gnome-screensaver
 
